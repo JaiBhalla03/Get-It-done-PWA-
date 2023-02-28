@@ -11,7 +11,7 @@ export default async function Nav(){
             <h1 className={'text-lg text-white'}>GET IT DONE</h1>
             <ul>
                 {
-                    (!session?.user)?<Login/>:<Logged avatar={session?.user?.image}/>
+                    (!session?.user)?<Login/>:<Logged avatar={session?.user?.image || ''}/>
                 }
             </ul>
         </nav>
