@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Todo = () => {
+type propType = {
+    title: string,
+    isCompleted: boolean
+}
+
+const Todo = ({title, isCompleted}:propType) => {
     return (
-        <div>
-            todo list
+        <div className="py-6 px-6 my-4 text-2xl bg-gray-800 rounded-lg">
+            {title} {isCompleted}
         </div>
     );
 };

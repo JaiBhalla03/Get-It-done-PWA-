@@ -11,8 +11,21 @@ const fetchTodos = async()=>{
     return response.data;
 }
 
+type todoType = {
+    email: string,
+    id: string,
+    image: string,
+    name: string,
+    todo:{
+        createdAt: string,
+        id: string,
+        isCompleted: boolean,
+        title: string,
+    }[]
+}
+
 export default function Home() {
-    const {data, isLoading} = useQuery({
+    const {data, isLoading} = useQuery<todoType>({
         queryFn: fetchTodos,
         queryKey: ["todos"]
     })
@@ -20,12 +33,17 @@ export default function Home() {
         return <h1>Loading...</h1>
     }
     console.log(data);
-    const todo_length = data.todo.length;
+    const todo_length = data?.todo.length;
   return (
     <main>
       <AddToDo/>
         {
-            (todo_length > 0)?<Todo/>:<Empty/>
+            data?.todo.map((todo_single)=>(
+                <Todo
+                    title={todo_single.title}
+                    isCompleted={todo_single.isCompleted}
+                />
+            ))
         }
     </main>
   )

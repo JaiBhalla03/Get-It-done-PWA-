@@ -18,7 +18,7 @@ export default function AddToDo(){
         {
             onSuccess:(data)=>{
                 toast.success("Todo Added🔥", {id: toastPostID})
-                // queryClient.invalidateQueries(["todos"])
+                queryClient.invalidateQueries(["todos"])
                 setTitle("")
                 setIsDisable(false);
             },
