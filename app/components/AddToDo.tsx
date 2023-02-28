@@ -16,14 +16,14 @@ export default function AddToDo(){
                 title,
             }),
         {
-            onSuccess:data=>{
-                toast.success("Todo Added🔥")
+            onSuccess:(data)=>{
+                toast.success("Todo Added🔥", {id: toastPostID})
                 // queryClient.invalidateQueries(["todos"])
                 setTitle("")
                 setIsDisable(false);
             },
             onError:(error)=>{
-                toast.error("Error adding your todo")
+                toast.error("Error adding your todo", {id: toastPostID})
                 setIsDisable(false)
             }
         }
