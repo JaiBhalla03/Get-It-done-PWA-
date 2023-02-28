@@ -40,6 +40,7 @@ export default function Home() {
         {
             data?.todo.map((todo_single)=>(
                 <Todo
+                    key={todo_single.id}
                     id={todo_single.id}
                     title={todo_single.title}
                     isCompleted={todo_single.isCompleted}
