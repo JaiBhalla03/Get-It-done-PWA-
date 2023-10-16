@@ -40,7 +40,7 @@ export default function AddToDo(){
             className={'py-6 px-4 bg-white rounded-lg shadow shadow-gray-500 shadow-lg'}>
             <div className={'flex justify-between items-center'}>
                 <input
-                    className={'text-white w-full text-center py-2 mx-2 bg-white border-none focus:outline-none'}
+                    className={'text-gray-400 w-full text-center py-2 mx-2 bg-white border-none focus:outline-none'}
                     name={'title'}
                     value={title}
                     onChange={(e)=>setTitle(e.target.value)}
