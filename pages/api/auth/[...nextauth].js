@@ -5,6 +5,7 @@ import prisma from '../../../prisma/lib/client'
 
 //const adapter = PrismaAdapter(prisma)
 
+
 export const authOptions = {
     secret: process.env.AUTH_SECRET,
     adapter: PrismaAdapter(prisma),

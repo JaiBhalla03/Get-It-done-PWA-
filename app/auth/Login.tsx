@@ -6,7 +6,7 @@ import {signIn} from "next-auth/react";
 const Login = () => {
     return (
         <li>
-            <button onClick={()=>signIn()} className={'text-sm bg-gray-600 text-white py-2 px-6 rounded-xl disabled:opacity-2.5'}>Sign in</button>
+            <button onClick={()=>signIn()} className={'text-xl font-semibold bg-white text-gray-400 py-2 px-6 rounded-xl shadow shadow-gray-400 shadow-lg disabled:opacity-2.5'}>Sign in</button>
         </li>
     );
 };

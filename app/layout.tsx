@@ -13,7 +13,7 @@ export default function RootLayout({children}:{ children: React.ReactNode }) {
   return (
     <html lang="en">
       <head/>
-      <body className={`mx-4 md:mx-48 xl:mx-96 ${roboto.variable} bg-gray-700`}>
+      <body className={`mx-4 md:mx-48 xl:mx-96 ${roboto.variable} bg-white`}>
       <QueryWrapper>
           <Nav/>
           {children}

@@ -10,9 +10,16 @@ type User = {
 
 const Logged = ({avatar}:User) => {
     return (
-        <li className={'flex'}>
-            <Image src={avatar} alt={''} width={32} height={32} className={'rounded-full mx-2'}/>
-            <button onClick={()=>signOut()} className={'text-sm bg-gray-600 text-white py-2 px-6 rounded-xl'}>Sign Out</button>
+        <li className={'flex items-center gap-1'}>
+            <div className={'rounded-full p-1 shadow shadow-gray-400 shadow-lg'}>
+                <Image src={avatar} alt={''} width={40} height={40} className={'rounded-full'}/>
+            </div>
+            <button
+                onClick={()=>signOut()}
+                className={'text-xl font-semibold bg-white text-gray-400 py-2 px-6 rounded-xl shadow shadow-gray-400 shadow-lg'}
+            >
+                Sign Out
+            </button>
         </li>
     );
 };

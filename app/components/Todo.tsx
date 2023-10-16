@@ -31,9 +31,9 @@ const Todo = ({title, isCompleted, id}:propType) => {
         mutate(id);
     }
     return (
-        <div className="flex justify-between items-center py-6 px-6 my-4 text-xl bg-gray-800 rounded-lg text-white">
+        <div className="flex justify-between items-center py-6 px-6 my-4 text-xl bg-white rounded-lg text-gray-500 shadow shadow-gray-500 shadow-lg">
             <h1>{title}</h1>
-            <button onClick={deletePost} className={'bg-red-500 px-2 md:px-4 lg:px-6  py-4 rounded-md'}>Delete</button>
+            <button onClick={deletePost} className={'bg-red-500 px-4 lg:px-6 text-white py-2 rounded-md'}>Delete</button>
         </div>
     );
 };

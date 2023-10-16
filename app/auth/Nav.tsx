@@ -9,8 +9,8 @@ export default async function Nav(){
 
     console.log(session)
     return (
-        <nav className={'flex justify-between items-center py-8'}>
-            <h1 className={'text-lg text-white'}>GET IT DONE</h1>
+        <nav className={'flex justify-between items-center py-8 h-14'}>
+            <h1 className={'text-2xl font-bold text-gray-400'}>GET IT DONE</h1>
             <ul>
                 {
                     (!session?.user)?<Login/>:<Logged avatar={session?.user?.image || ''}/>
